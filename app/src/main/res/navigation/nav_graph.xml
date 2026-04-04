@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/artFragment">
+
+    <!--
+        this is the main screen that loads when the app starts.
+        it shows the artwork list and search bar
+        TO BE IMPLEMENTED LATER (PHASE 2)
+    -->
+    <fragment
+        android:id="@+id/artFragment"
+        android:name="com.example.art.ui.ArtFragment"
+        android:label="Artworks">
+
+        <!--
+            this action lets ArtFragment navigate
+            to the ArtDetailsFragment
+        -->
+        <action
+            android:id="@+id/action_artFragment_to_artDetailsFragment"
+            app:destination="@id/artDetailsFragment" />
+    </fragment>
+
+    <!--
+        this fragment shows the saved favorite artwork from Room
+        TO BE IMPLEMENTED LATER (PHASE 2)
+    -->
+    <fragment
+        android:id="@+id/favoriteArtworksFragment"
+        android:name="com.example.art.ui.FavoriteArtworksFragment"
+        android:label="Favorites">
+
+        <!--
+            this action lets FavoriteArtworksFragment navigate
+            to the ArtDetailsFragment when a user taps a favorite artwork
+        -->
+        <action
+            android:id="@+id/action_favoriteArtworksFragment_to_artDetailsFragment"
+            app:destination="@id/artDetailsFragment" />
+    </fragment>
+
+    <!--
+        this fragment shows the full artwork details,
+        including artist, description, image, medium, ect.
+        TO BE IMPLEMENTED LATER (PHASE 2)
+    -->
+    <fragment
+        android:id="@+id/artDetailsFragment"
+        android:name="com.example.art.ui.ArtDetailsFragment"
+        android:label="Artwork Details" />
+</navigation>
