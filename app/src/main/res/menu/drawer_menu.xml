@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        this menu item opens the ArtFragment
+    -->
+    <item
+        android:id="@+id/artFragment"
+        android:icon="@drawable/ic_art"
+        android:title="Artworks" />
+
+    <!--
+        this menu item opens the FavoriteArtworkFragment
+    -->
+    <item
+        android:id="@+id/favoriteArtworksFragment"
+        android:icon="@drawable/ic_favorite"
+        android:title="Favorites" />
+</menu>
