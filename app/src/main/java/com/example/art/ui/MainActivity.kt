@@ -13,6 +13,8 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 
 class MainActivity : AppCompatActivity() {
 
+    class MainActivity : AppCompatActivity() {
+
         private lateinit var navController: NavController
         private lateinit var drawerLayout: DrawerLayout
         private lateinit var appBarConfiguration: AppBarConfiguration
@@ -31,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
             // NavController setup
             val navHostFragment =
-             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+                supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
             navController = navHostFragment.navController
 
             // AppBarConfiguration setup
@@ -56,7 +58,9 @@ class MainActivity : AppCompatActivity() {
             toggle.syncState()  // Sync the toggle state
         }
 
-    override fun onSupportNavigateUp(): Boolean {
-       return navController.navigateUp() || super.onSupportNavigateUp()
+        override fun onSupportNavigateUp(): Boolean {
+            return navController.navigateUp() || super.onSupportNavigateUp()
+        }
     }
+
 }
