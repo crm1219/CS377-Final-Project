@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 data class FavoriteArtworkEntity(
     @PrimaryKey val id: Int,
     val title: String,
-    val imageId: String,
+    val imageId: String?,
     val artistTitle: String,
     val artistDisplay: String,
     val dateDisplay: String,
