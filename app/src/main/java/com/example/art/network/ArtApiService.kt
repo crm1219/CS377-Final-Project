@@ -16,5 +16,5 @@ interface ArtApiService {
 
     // Get details about a specific artwork
     @GET("artworks/?fields=id,title,image_id,artist_display,date_display,description,place_of_origin,medium_display")
-    suspend fun getArtworkDetails(@Query("ids")id: String) : ArtworkDetailResponse
+    suspend fun getArtworkDetails(@Query("ids")id: Int) : ArtworkDetailResponse
 }

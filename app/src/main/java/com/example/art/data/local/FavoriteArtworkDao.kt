@@ -1,4 +1,4 @@
-package com.exampke.art.data.local
+package com.example.art.data.local
 
 // imports
 import androidx.lifecycle.LiveData

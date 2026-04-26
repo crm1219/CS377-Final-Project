@@ -12,7 +12,7 @@ private fun buildImageURL(iiifUrl: String?, imageId: String?): String? {
 }
 
 // takes raw API data and turns it into clean Artwork object
-fun ArtworkDto.toArtwork(iiifUrl: String): Artwork {
+fun ArtworkDto.toArtwork(iiifUrl: String?): Artwork {
     return Artwork(
         id = id,
         title = title ?: "Untitled",
