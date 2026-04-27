@@ -15,14 +15,14 @@ private fun buildImageURL(iiifUrl: String?, imageId: String?): String? {
 fun ArtworkDto.toArtwork(iiifUrl: String?): Artwork {
     return Artwork(
         id = id,
-        title = title ?: "Untitled",
-        imageId = buildImageURL(iiifUrl, imageId),
-        artistTitle = artistTitle,
-        artistDisplay = artistDisplay,
-        dateDisplay = dateDisplay,
-        description = description,
-        placeOfOrigin = placeOfOrigin,
-        mediumDisplay = mediumDisplay
+        title = title ?: "Unknown title.",
+        imageId = buildImageURL(iiifUrl, imageId) ?: "",
+        artistTitle = artistTitle ?: "Unknown artist.",
+        artistDisplay = artistDisplay ?: "Unknown artist.",
+        dateDisplay = dateDisplay ?: "Unknown date.",
+        description = description ?: "No description available.",
+        placeOfOrigin = placeOfOrigin ?: "Unknown origin.",
+        mediumDisplay = mediumDisplay ?: "Unknown medium.",
     )
 }
 
@@ -31,13 +31,13 @@ fun Artwork.toEntity(): FavoriteArtworkEntity {
     return FavoriteArtworkEntity(
         id = id,
         title = title,
-        imageId = imageId,
-        artistTitle = artistTitle,
-        artistDisplay = artistDisplay,
-        dateDisplay = dateDisplay,
+        image_id = imageId,
+        artist_title = artistTitle,
+        artist_display = artistDisplay,
+        date_display = dateDisplay,
         description = description,
-        placeOfOrigin = placeOfOrigin,
-        mediumDisplay = mediumDisplay
+        place_of_origin = placeOfOrigin,
+        medium_display = mediumDisplay
     )
 }
 
@@ -46,12 +46,12 @@ fun FavoriteArtworkEntity.toArtwork(): Artwork {
     return Artwork(
         id = id,
         title = title,
-        imageId = imageId,
-        artistTitle = artistTitle,
-        artistDisplay = artistDisplay,
-        dateDisplay = dateDisplay,
+        imageId = image_id,
+        artistTitle = artist_title,
+        artistDisplay = artist_display,
+        dateDisplay = date_display,
         description = description,
-        placeOfOrigin = placeOfOrigin,
-        mediumDisplay = mediumDisplay
+        placeOfOrigin = place_of_origin,
+        mediumDisplay = medium_display
     )
 }
