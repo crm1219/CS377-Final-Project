@@ -9,8 +9,6 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import com.google.android.material.navigation.NavigationView
 import com.example.art.R
-import androidx.appcompat.app.ActionBarDrawerToggle
-
 
 class MainActivity : AppCompatActivity() {
 
@@ -44,20 +42,9 @@ class MainActivity : AppCompatActivity() {
         // Link NavController with Toolbar and NavigationView
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
         NavigationUI.setupWithNavController(navigationView, navController)
-
-        // Set up ActionBarDrawerToggle for the menu
-        val toggle = ActionBarDrawerToggle(
-            this,
-            drawerLayout,
-            toolbar,
-            R.string.open_drawer,
-            R.string.close_drawer
-        )
-        drawerLayout.addDrawerListener(toggle)
-        toggle.syncState()  // Sync the toggle state
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        return navController.navigateUp() || super.onSupportNavigateUp()
+        return NavigationUI.navigateUp(navController, appBarConfiguration)
     }
 }
