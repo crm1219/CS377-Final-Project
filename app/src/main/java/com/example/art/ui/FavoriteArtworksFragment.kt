@@ -29,7 +29,7 @@ class FavoriteArtworksFragment : Fragment(R.layout.fragment_favorite_artworks) {
         // clicking a favorite artwork opens details screen
         adapter = FavoriteArtworkAdapter { artwork ->
             val bundle = Bundle().apply {
-                putInit("artworkId", artwork.id)
+                putInt("artworkId", artwork.id)
             }
 
             findNavController().navigate(
