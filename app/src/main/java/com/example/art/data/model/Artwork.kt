@@ -1,9 +1,13 @@
 package com.example.art.data.model
 
 data class Artwork (
-    val id: String,
+    val id: Int,
     val title: String,
-    val image_id: String,
-    val artist_display: String,
-    val date_display: String
+    val imageId: String?,
+    val artistTitle: String,
+    val artistDisplay: String,
+    val dateDisplay: String,
+    val description: String,
+    val placeOfOrigin: String,
+    val mediumDisplay: String
 )
