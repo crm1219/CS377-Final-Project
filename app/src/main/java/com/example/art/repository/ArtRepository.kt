@@ -23,7 +23,7 @@ class ArtRepository(
     suspend fun getArtworks(): List<Artwork> {
         val response = api.getInitialArtworks()
 
-        // combine APIT base iiifUrl with imageId
+        // combine API iiifUrl with imageId
         val iiifUrl = response.config?.iiifUrl
 
         return response.data.map { artworkDto ->

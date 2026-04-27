@@ -5,7 +5,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.exampke.art.data.local.FavoriteArtworkDao
+import com.example.art.data.local.FavoriteArtworkDao
 import com.example.art.data.model.FavoriteArtworkEntity
 
 // main Room database class for the app
