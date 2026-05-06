@@ -11,3 +11,8 @@ Our core functionality includes loading artworks into a RecyclerView with a Retr
 
 ## Installation Requirements
 To install and run this app, clone this repository and open it through Android Studio. Make sure you have a stable internet connection and at least the Panda 3 version of Android Studio.
+
+## Architecture and Project Structure
+This application follows the Model-View-ViewModel architectural pattern. Classes are divided between five different modules - data, which stores the information displayed in the app; network, which fetches data from the API; repository, which interfaces between the data, network, and viewmodel classes; viewmodel, which handles the business logic of the application; and ui, which displays information in the app's view components.
+
+## Contribution Guidelines
